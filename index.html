@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<title> responsive field </title>
+		
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+			  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<!--<link rel="icon" type="image/png" href="favicon.png">-->
+	
+	
+</head>
+<body>
+	<div class="button">
+		<button>Sign Up for my News Letter</button>
+		<form class="hide">
+			<input type="email" placeholder="abc@example.com"id="email" required>
+			<input type="submit" value="Submit" required>
+		</form>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("form").slideDown(200);
+				$("button").css({
+					"border":"none",
+					"cursor":"default",
+					"borderBottomLeftRadius":"0px",
+					"borderBottomRightRadius":"0px"				
+				});
+				$("form").css({
+					"borderTopLeftRadius":"0px",
+					"borderTopRightRadius":"0px",
+				});
+				$("#email").focus(); //kiírja, h hiányzik a @ jel
+			});
+		});
+	</script>
+</body>
+
+</html>
