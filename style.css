@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+	box-sizing:border-box;
+	margin: 0;
+    padding: 0;
+	font-family:'Roboto', sans-serif;
+	font-weight:700;
+}
+body{
+	display: flex;
+   /* margin: 0;
+    padding: 0;*/
+    height: 100vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+	flex-flow: row wrap;
+    border: 2px solid red;
+	/*font-family:'Roboto', sans-serif;
+	font-weight:700*/
+}
+.button{
+	width:450px;
+	box-shadow:0 14px 28px rgba(0,0,0, .1),
+	0 14px 10px rgba(0,0,0, .2);
+	
+}
+.button button{
+	background:#2573a7;
+	padding:15px 16px;
+	font-size:28px;
+	color:white;
+	border:1px solid #2573a7;
+	border-radius:5px;
+	width:100%;
+	cursor:pointer;
+	outline:none;
+}
+form{
+	display:flex;
+	flex-flow:row nowrap; /*a submit gomb nem ugrik a köv sorba ha összenyomom a képernőt; nézd meg wrap beállításnál*/
+	background:#1c567d;
+	padding:20px;
+	border-radius:5px;
+	
+}
+form input{
+	padding:12px;
+	border-radius:3px;
+}
+form input[type="email"]{
+	flex:1; /*azért kell, h olyan széles legyen mint a button class*/
+	outline:none;
+	border:3px solid transparent;
+	font-size:18px;
+}
+form input[type="email"]:focus{ /*amikor bele klikk a border színe megváltozik*/
+	border:3px solid red;
+}
+form input[type="submit"]{
+	font-size:17px;
+	color:white;
+	outline:none;
+	cursor:pointer;
+	padding:0 15px;
+	margin: 0 0 0 20px;
+	background: linear-gradient(#2980b9,#206592);
+	border: 1px solid #1c567d;
+}
+form input[type="submit"]:hover{
+	background: linear-gradient(#2e90d1,#206592);
+}
+form.hide{
+	display:none;
+}
+@media(max-width:600px){
+	form{
+		flex-flow: row wrap;
+	}
+	form input{
+		padding:14px!important;
+		margin:0px!important;
+		flex:100%;
+	}
+	form input[type="submit"]{
+		margin-top:14px!important;
+		font-size:20px;
+	}
+}
